@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      dinero = Number(prompt("¿Cuántos euros desea cambiar?"));
+      moneda = window.prompt(
+        "¿A qué moneda desea realizar el cambio (dolares, yenes o libras)?"
+      );
+
+      resultadoCambio();
+
+      function resultadoCambio() {
+        if (moneda == "dolares") {
+          resultadoCambio = (dinero * 1.28611) / 1;
+          window.alert(
+            "La cantidad introducida es de " + resultadoCambio + " dolares."
+          );
+        } else if (moneda == "yenes") {
+          resultadoCambio = (dinero * 129.852) / 1;
+          window.alert(
+            "La cantidad introducida es de " + resultadoCambio + " yenes."
+          );
+        } else if (moneda == "libras") {
+          resultadoCambio = (dinero * 0.86) / 1;
+          window.alert(
+            "La cantidad introducida es de " + resultadoCambio + " libras."
+          );
+        } else {
+          window.alert("Error");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let pregunta;
+
+      do {
+        pregunta = parseInt(
+          window.prompt("Introduce un año. Si no deseas seguir, introduce 0")
+        );
+        if (pregunta !== 0) {
+          let respuesta = calcularBisiesto(pregunta);
+          if (respuesta === true) {
+            window.alert("El año " + pregunta + " es bisiesto");
+          } else {
+            window.alert("El año " + pregunta + " no es bisiesto");
+          }
+        }
+      } while (pregunta !== 0);
+
+      function calcularBisiesto(pregunta) {
+        if ((pregunta % 4 == 0 && pregunta % 100 != 0) || pregunta % 400 == 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
